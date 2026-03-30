@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark bg-dark px-3">
+  <a class="navbar-brand">SocialApp</a>
+
+  <div class="d-flex gap-2 align-items-center">
+    <div class="input-group">
+      <span class="input-group-text bg-secondary border-secondary text-white">@</span>
+      <input
+        type="text"
+        class="form-control bg-dark text-white border-secondary"
+        placeholder="Buscar por username..."
+        [(ngModel)]="username"
+        (keydown)="onKeydown($event)"
+      />
+    </div>
+    <button class="btn btn-warning" (click)="onSearch()">
+      Buscar
+    </button>
+  </div>
+</nav><p>navbar works!</p>
