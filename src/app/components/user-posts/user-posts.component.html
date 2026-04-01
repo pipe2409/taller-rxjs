@@ -1,0 +1,31 @@
+<div *ngIf="posts.length > 0" class="mt-4">
+  <h3 class="mb-3">Posts del usuario</h3>
+
+  <div *ngFor="let post of posts" class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h5>{{ post.title }}</h5>
+      <p>{{ post.body }}</p>
+
+      <p>
+        <strong>Reacciones:</strong>
+        👍 {{ post.reactions.likes }} | 👎 {{ post.reactions.dislikes }}
+      </p>
+
+      <div *ngIf="post.coments?.length">
+        <h6>Comentarios</h6>
+        <ul class="list-group">
+          <li *ngFor="let comment of post.coments" class="list-group-item">
+            <p class="mb-1">{{ comment.body }}</p>
+            <small class="text-muted">
+              Por: {{ comment.user.fullName }}
+            </small>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="post.coments?.length === 0" class="text-muted">
+        Este post no tiene comentarios.
+      </div>
+    </div>
+  </div>
+</div>

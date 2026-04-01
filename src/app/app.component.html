@@ -1,1 +1,15 @@
-<app-navbar (search)="onSearch($event)" />
+<app-navbar (search)="onSearch($event)"></app-navbar>
+
+<div class="container mt-4">
+  <div *ngIf="loading" class="alert alert-info">
+    Cargando información...
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <app-user-info [user]="user"></app-user-info>
+
+  <app-user-posts [posts]="posts"></app-user-posts>
+</div>

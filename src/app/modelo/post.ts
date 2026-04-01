@@ -1,3 +1,5 @@
+import { Comentario } from "./comentario";
+
 export interface Post {
   id: number;
   userId: number;
@@ -6,5 +8,7 @@ export interface Post {
   reactions: {
     likes: number;
     dislikes: number;
+
   };
+  coments?: Comentario[];
 }

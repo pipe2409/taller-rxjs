@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms'; // 👈 agregar este import
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserInfoComponent } from './components/user-info/user-info.component';
+import { UserPostsComponent } from './components/user-posts/user-posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    UserInfoComponent,
+    UserPostsComponent
   ],
   imports: [
     BrowserModule,
