@@ -10,5 +10,5 @@ export interface Post {
     dislikes: number;
 
   };
-  coments?: Comentario[];
+  comments?: Comentario[];
 }
